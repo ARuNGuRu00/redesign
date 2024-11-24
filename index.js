@@ -75,7 +75,8 @@ async function getPhase2(val){
         password2=val;
         if(password1===password2){
             password2="";
-            bot_win("comformation successfull!");
+            bot_win("Comformation successfull!");
+            bot_win("Account created you can now Check In")
             phase2=0;
             await sleep(2000);
             window.location.replace = "checkIn.html";
