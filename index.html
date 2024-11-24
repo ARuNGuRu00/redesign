@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "R9sX-2L7n6DMc7Ao4",
+            });
+        })();
+        </script>
+    </head>
+    <body>
+        <div class="dummy" onclick="down()"></div>
+        <div class="nav-bar">Proposal
+            <div class="but">
+                <a href="checkIn.html"><button id="check-but" >Check In</button></a>
+                <button id="join-but" onclick="join_function()">Join</button>
+            </div>
+        </div>
+        <div class="bot" id="bot" onclick="chat()">
+            <div class="bot-dummy">
+                <div class="chat-win-dum" id="chat-win-dum">
+                    <div class="chat-win" id="chat-win"></div>
+                </div>
+                <div class="input" id="input">
+                    <form onsubmit="win('text');return false;" id="search-form" >
+                        <input type="text" id="search" placeholder="Type your questions and press Enter" required>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            var contentDiv = document.getElementById("chat-win");
+            contentDiv.scrollTop = contentDiv.scrollHeight;
+        </script>
+    </body>
+</html>
